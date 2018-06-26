@@ -1,0 +1,371 @@
+{
+   "DEF TEMP-TABLE NO-UNDO": {
+      "prefix": "dtt",
+      "description": "Define a temp-table",
+      "body": [
+          "DEFINE TEMP-TABLE ${1:ttName} NO-UNDO",
+          "\tFIELD ${2:fieldName} AS ${3:CHARACTER}",
+          "."
+      ]
+   },
+   "PROCEDURE": {
+      "prefix": "pro",
+      "description": "Define a procedure",
+      "body": [
+         "/*------------------------------------------------------------------------------",
+         "  Purpose:     ",
+         "  Parameters:  ",
+         "  Notes:       ",
+         "------------------------------------------------------------------------------*/",
+         "PROCEDURE ${1:procName} PRIVATE:",
+         "\t$0",
+         "END PROCEDURE."
+      ]
+   },
+   "FUNCTION": {
+      "prefix": "func",
+      "description": "Define a function",
+      "body": [
+         "/*------------------------------------------------------------------------------",
+         "  Purpose:     ",
+         "  Parameters:  ",
+         "  Notes:       ",
+         "------------------------------------------------------------------------------*/",
+         "FUNCTION ${1:functionName} RETURNS ${2:CHARACTER} PRIVATE ( ${3} ):",
+         "\tDEFINE VARIABLE vRet   AS ${2:CHARACTER} NO-UNDO.",
+         "\t$0",
+         "\tRETURN vRet.",
+         "END FUNCTION."
+      ]
+   },
+   "DEF VAR AS CHAR NO-UNDO": {
+      "prefix": "dvch",
+      "description": "Define variable as character no-undo",
+      "body":[
+         "DEFINE VARIABLE ${1:varName} AS CHARACTER NO-UNDO."
+      ]
+   },
+   "DEF VAR AS INT64 NO-UNDO": {
+      "prefix": "dvin",
+      "description": "Define variable as int64 no-undo",
+      "body":[
+         "DEFINE VARIABLE ${1:varName} AS INT64 NO-UNDO."
+      ]
+   },
+   "DEF VAR AS HANDLE NO-UNDO": {
+      "prefix": "dvhn",
+      "description": "Define variable as handle no-undo",
+      "body":[
+         "DEFINE VARIABLE ${1:varName} AS HANDLE NO-UNDO."
+      ]
+   },
+   "DEF VAR AS DATE NO-UNDO": {
+      "prefix": "dvda",
+      "description": "Define variable as date no-undo",
+      "body":[
+         "DEFINE VARIABLE ${1:varName} AS DATE NO-UNDO."
+      ]
+   },
+   "DEF VAR AS DECIMAL NO-UNDO": {
+      "prefix": "dvde",
+      "description": "Define variable as decimal no-undo",
+      "body":[
+         "DEFINE VARIABLE ${1:varName} AS DECIMAL NO-UNDO."
+      ]
+   },
+   "DEF VAR AS DATETIME NO-UNDO": {
+      "prefix": "dvdt",
+      "description": "Define variable as datetime no-undo",
+      "body":[
+         "DEFINE VARIABLE ${1:varName} AS DATETIME NO-UNDO."
+      ]
+   },
+   "DEF VAR AS LOGICAL NO-UNDO": {
+      "prefix": "dvlg",
+      "description": "Define variable as logical no-undo",
+      "body":[
+         "DEFINE VARIABLE ${1:varName} AS LOGICAL NO-UNDO."
+      ]
+   },
+   "DEF VAR AS LONGCHAR NO-UNDO": {
+      "prefix": "dvlc",
+      "description": "Define variable as longchar no-undo",
+      "body":[
+         "DEFINE VARIABLE ${1:varName} AS LONGCHAR NO-UNDO."
+      ]
+   },
+   "DEF VAR AS MEMPTR NO-UNDO": {
+      "prefix": "dvmp",
+      "description": "Define variable as memptr no-undo",
+      "body":[
+         "DEFINE VARIABLE ${1:varName} AS MEMPTR NO-UNDO."
+      ]
+   },
+   "DEF INPUT PARAM AS CHAR NO-UNDO": {
+      "prefix": "ipch",
+      "description": "Define input parameter as character no-undo",
+      "body":[
+         "DEFINE INPUT  PARAMETER ${1:varName} AS CHARACTER NO-UNDO."
+      ]
+   },
+   "DEF INPUT PARAM AS INT64 NO-UNDO": {
+      "prefix": "ipin",
+      "description": "Define input parameter as int64 no-undo",
+      "body":[
+         "DEFINE INPUT  PARAMETER ${1:varName} AS INT64 NO-UNDO."
+      ]
+   },
+   "DEF INPUT PARAM AS HANDLE NO-UNDO": {
+      "prefix": "iphn",
+      "description": "Define input parameter as handle no-undo",
+      "body":[
+         "DEFINE INPUT  PARAMETER ${1:varName} AS HANDLE NO-UNDO."
+      ]
+   },
+   "DEF INPUT PARAM AS DATE NO-UNDO": {
+      "prefix": "ipda",
+      "description": "Define input parameter as date no-undo",
+      "body":[
+         "DEFINE INPUT  PARAMETER ${1:varName} AS DATE NO-UNDO."
+      ]
+   },
+   "DEF INPUT PARAM AS DECIMAL NO-UNDO": {
+      "prefix": "ipde",
+      "description": "Define input parameter as decimal no-undo",
+      "body":[
+         "DEFINE INPUT  PARAMETER ${1:varName} AS DECIMAL NO-UNDO."
+      ]
+   },
+   "DEF INPUT PARAM AS DATETIME NO-UNDO": {
+      "prefix": "ipdt",
+      "description": "Define input parameter as datetime no-undo",
+      "body":[
+         "DEFINE INPUT  PARAMETER ${1:varName} AS DATETIME NO-UNDO."
+      ]
+   },
+   "DEF INPUT PARAM AS LOGICAL NO-UNDO": {
+      "prefix": "iplg",
+      "description": "Define input parameter as logical no-undo",
+      "body":[
+         "DEFINE INPUT  PARAMETER ${1:varName} AS LOGICAL NO-UNDO."
+      ]
+   },
+   "DEF INPUT PARAM AS LONGCHAR NO-UNDO": {
+      "prefix": "iplc",
+      "description": "Define input parameter as longchar no-undo",
+      "body":[
+         "DEFINE INPUT  PARAMETER ${1:varName} AS LONGCHAR NO-UNDO."
+      ]
+   },
+   "DEF INPUT PARAM AS MEMPTR NO-UNDO": {
+      "prefix": "ipmp",
+      "description": "Define input parameter as memptr no-undo",
+      "body":[
+         "DEFINE INPUT  PARAMETER ${1:varName} AS MEMPTR NO-UNDO."
+      ]
+   },
+   "DEF OUTPUT PARAM AS CHAR NO-UNDO": {
+      "prefix": "opch",
+      "description": "Define output parameter as character no-undo",
+      "body":[
+         "DEFINE OUTPUT PARAMETER ${1:varName} AS CHARACTER NO-UNDO."
+      ]
+   },
+   "DEF OUTPUT PARAM AS INT64 NO-UNDO": {
+      "prefix": "opin",
+      "description": "Define output parameter as int64 no-undo",
+      "body":[
+         "DEFINE OUTPUT PARAMETER ${1:varName} AS INT64 NO-UNDO."
+      ]
+   },
+   "DEF OUTPUT PARAM AS HANDLE NO-UNDO": {
+      "prefix": "ophn",
+      "description": "Define output parameter as handle no-undo",
+      "body":[
+         "DEFINE OUTPUT PARAMETER ${1:varName} AS HANDLE NO-UNDO."
+      ]
+   },
+   "DEF OUTPUT PARAM AS DATE NO-UNDO": {
+      "prefix": "opda",
+      "description": "Define output parameter as date no-undo",
+      "body":[
+         "DEFINE OUTPUT PARAMETER ${1:varName} AS DATE NO-UNDO."
+      ]
+   },
+   "DEF OUTPUT PARAM AS DECIMAL NO-UNDO": {
+      "prefix": "opde",
+      "description": "Define output parameter as decimal no-undo",
+      "body":[
+         "DEFINE OUTPUT PARAMETER ${1:varName} AS DECIMAL NO-UNDO."
+      ]
+   },
+   "DEF OUTPUT PARAM AS DATETIME NO-UNDO": {
+      "prefix": "opdt",
+      "description": "Define output parameter as datetime no-undo",
+      "body":[
+         "DEFINE OUTPUT PARAMETER ${1:varName} AS DATETIME NO-UNDO."
+      ]
+   },
+   "DEF OUTPUT PARAM AS LOGICAL NO-UNDO": {
+      "prefix": "oplg",
+      "description": "Define output parameter as logical no-undo",
+      "body":[
+         "DEFINE OUTPUT PARAMETER ${1:varName} AS LOGICAL NO-UNDO."
+      ]
+   },
+   "DEF OUTPUT PARAM AS LONGCHAR NO-UNDO": {
+      "prefix": "oplc",
+      "description": "Define output parameter as longchar no-undo",
+      "body":[
+         "DEFINE OUTPUT PARAMETER ${1:varName} AS LONGCHAR NO-UNDO."
+      ]
+   },
+   "DEF OUTPUT PARAM AS MEMPTR NO-UNDO": {
+      "prefix": "opmp",
+      "description": "Define output parameter as memptr no-undo",
+      "body":[
+         "DEFINE OUTPUT PARAMETER ${1:varName} AS MEMPTR NO-UNDO."
+      ]
+   },
+   "DEF INPUT-OUTPUT PARAM AS CHAR NO-UNDO": {
+      "prefix": "iopch",
+      "description": "Define input-output parameter as character no-undo",
+      "body":[
+         "DEFINE INPUT-OUTPUT PARAMETER ${1:varName} AS CHARACTER NO-UNDO."
+      ]
+   },
+   "DEF INPUT-OUTPUT PARAM AS INT64 NO-UNDO": {
+      "prefix": "iopin",
+      "description": "Define input-output parameter as int64 no-undo",
+      "body":[
+         "DEFINE INPUT-OUTPUT PARAMETER ${1:varName} AS INT64 NO-UNDO."
+      ]
+   },
+   "DEF INPUT-OUTPUT PARAM AS HANDLE NO-UNDO": {
+      "prefix": "iophn",
+      "description": "Define input-output parameter as handle no-undo",
+      "body":[
+         "DEFINE INPUT-OUTPUT PARAMETER ${1:varName} AS HANDLE NO-UNDO."
+      ]
+   },
+   "DEF INPUT-OUTPUT PARAM AS DATE NO-UNDO": {
+      "prefix": "iopda",
+      "description": "Define input-output parameter as date no-undo",
+      "body":[
+         "DEFINE INPUT-OUTPUT PARAMETER ${1:varName} AS DATE NO-UNDO."
+      ]
+   },
+   "DEF INPUT-OUTPUT PARAM AS DECIMAL NO-UNDO": {
+      "prefix": "iopde",
+      "description": "Define input-output parameter as decimal no-undo",
+      "body":[
+         "DEFINE INPUT-OUTPUT PARAMETER ${1:varName} AS DECIMAL NO-UNDO."
+      ]
+   },
+   "DEF INPUT-OUTPUT PARAM AS DATETIME NO-UNDO": {
+      "prefix": "iopdt",
+      "description": "Define input-output parameter as datetime no-undo",
+      "body":[
+         "DEFINE INPUT-OUTPUT PARAMETER ${1:varName} AS DATETIME NO-UNDO."
+      ]
+   },
+   "DEF INPUT-OUTPUT PARAM AS LOGICAL NO-UNDO": {
+      "prefix": "ioplg",
+      "description": "Define input-output parameter as logical no-undo",
+      "body":[
+         "DEFINE INPUT-OUTPUT PARAMETER ${1:varName} AS LOGICAL NO-UNDO."
+      ]
+   },
+   "DEF INPUT-OUTPUT PARAM AS LONGCHAR NO-UNDO": {
+      "prefix": "ioplc",
+      "description": "Define input-output parameter as longchar no-undo",
+      "body":[
+         "DEFINE INPUT-OUTPUT PARAMETER ${1:varName} AS LONGCHAR NO-UNDO."
+      ]
+   },
+   "DEF INPUT-OUTPUT PARAM AS MEMPTR NO-UNDO": {
+      "prefix": "iopmp",
+      "description": "Define input-output parameter as memptr no-undo",
+      "body":[
+         "DEFINE INPUT-OUTPUT PARAMETER ${1:varName} AS MEMPTR NO-UNDO."
+      ]
+   },  
+   "DEFINE STREAM": {
+      "prefix": "ds",
+      "description": "Define stream",
+      "body":[
+         "DEFINE STREAM ${1:streamName}."
+      ]
+   },  
+   "DEFINE BUFFER": {
+      "prefix": "dvb",
+      "description": "Define buffer BufName FOR TableName.",
+      "body":[
+         "DEFINE BUFFER ${1:bufferName} FOR ${2:tableName}."
+      ]
+   },  
+   "FIND FIRST WHERE NO-LOCK.": {
+      "prefix": "ffwn",
+      "description": "find first where no-lock.",
+      "body":[
+         "FIND FIRST ${1:table} WHERE ${2:where} NO-LOCK NO-ERROR."
+      ]
+   },
+   "MESSAGE VIEW-AS ALERT-BOX.": {
+      "prefix": "mes",
+      "description": "message view-as alert-box info buttons ok.",
+      "body":[
+         "MESSAGE ${1:message}",
+         "\tVIEW-AS ALERT-BOX INFO BUTTONS OK."
+      ]
+   },
+   "vI = vI + 1.": {
+      "prefix": "i++",
+      "description": "Increase the variable by 1",
+      "body":[
+         "$1 = $1 + 1."
+      ]
+   },
+   "vI = vI - 1.": {
+      "prefix": "i--",
+      "description": "Decrease the variable by 1",
+      "body":[
+         "$1 = $1 - 1."
+      ]
+   },
+   "&Global-define": {
+      "prefix": "&gl",
+      "description": "&GLOBAL-DEFINE",
+      "body":[
+         "&GLOBAL-DEFINE $1"
+      ]
+   },
+   "&Scoped-define": {
+      "prefix": "&sc",
+      "description": "&SCOPED-DEFINE",
+      "body":[
+         "&GLOBAL-DEFINE $1"
+      ]
+   },
+   "IF THEN": {
+      "prefix": "if",
+      "description": "IF THEN ELSE",
+      "body":[
+         "IF $1 THEN DO:",
+         "\t$0",
+         "END."
+      ]
+   },
+   "IF THEN ELSE": {
+      "prefix": "ife",
+      "description": "IF THEN ELSE",
+      "body":[
+         "IF $1 THEN DO:",
+         "\t$0",
+         "END.",
+         "ELSE DO:",
+         "\t",
+         "END."
+      ]
+   }
+}

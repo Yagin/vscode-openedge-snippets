@@ -1,0 +1,27 @@
+{
+   "name": "vscode-openedge-snippets",
+   "displayName": "OpenEdge ABL Snippets",
+   "description": "Code snippets for OpenEdge ABL development",
+   "icon": "images/openedge.png",   
+   "version": "0.0.1",
+   "publisher": "YaginIgor",
+   "license": "SEE LICENSE IN LICENSE.md",
+   "engines": {
+       "vscode": "^1.24.0"
+   },
+    "repository": { 
+      "type": "git", 
+      "url": "https://github.com/Yagin/vscode-openedge-snippets" 
+   },       
+    "categories": [
+      "Snippets"
+   ],
+   "contributes": {
+       "snippets": [
+            {
+               "language": "abl",
+               "path": "./snippets/snippets.json"
+            }
+         ]
+   }
+}
