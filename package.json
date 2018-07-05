@@ -3,7 +3,7 @@
    "displayName": "OpenEdge ABL Snippets",
    "description": "Code snippets for OpenEdge ABL development",
    "icon": "images/openedge.png",   
-   "version": "0.0.2",
+   "version": "0.0.3",
    "publisher": "YaginIgor",
    "license": "SEE LICENSE IN LICENSE.md",
    "engines": {

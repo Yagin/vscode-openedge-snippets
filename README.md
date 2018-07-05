@@ -68,12 +68,12 @@ Below is a list of all available snippets and the triggers of each one. The **�
 | -------: | ------- |
 | `ds⇥` |  `DEFINE STREAM streamName.`|
 | `dvb⇥` | `DEFINE BUFFER bufferName FOR tableName.` |
+| `dpb⇥` | `DEFINE PARAMETER BUFFER buferName FOR bufferName.` |
 | `ffwn⇥` | `FIND FIRST {table} WHERE {where} NO-LOCK NO-ERROR.` | 
 | `i++⇥` | `$1 = $1 + 1.` |
 | `i--⇥` | `$1 = $1 - 1.` |
 | `&gl⇥` | `&GLOBAL-DEFINE $1` |
-| `&sc⇥` | `&GLOBAL-DEFINE $1` |
-| `123qw` | `23423432` |
+| `&sc⇥` | `&SCOPED-DEFINE $1` |
 
 ### dtt⇥ - DEFINE TEMP-TABLE
 
@@ -127,3 +127,23 @@ ELSE DO:
 END.
 ```
 
+### fore - FOR EACH WHERE NO-LOCK
+```
+FOR EACH bufferName WHERE query NO-LOCK:
+   ...
+END. /* FOR EACH bufferName */
+```
+
+### forf - FOR FIRST WHERE NO-LOCK
+```
+FOR FIRST bufferName WHERE query NO-LOCK:
+   ...
+END. /* FOR FIRST bufferName */
+```
+
+### forl - FOR LAST WHERE NO-LOCK
+```
+FOR LAST bufferName WHERE query NO-LOCK:
+   ...
+END. /* FOR LAST bufferName */
+```

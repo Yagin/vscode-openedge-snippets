@@ -304,6 +304,13 @@
          "DEFINE BUFFER ${1:bufferName} FOR ${2:tableName}."
       ]
    },  
+   "DEFINE PARAMETER BUFFER": {
+      "prefix": "dpb",
+      "description": "Define parameter buffer BufName FOR bufName.",
+      "body":[
+         "DEFINE PARAMETER BUFFER ${1:bufferName} FOR ${1:bufferName}."
+      ]
+   },  
    "FIND FIRST WHERE NO-LOCK.": {
       "prefix": "ffwn",
       "description": "find first where no-lock.",
@@ -344,7 +351,7 @@
       "prefix": "&sc",
       "description": "&SCOPED-DEFINE",
       "body":[
-         "&GLOBAL-DEFINE $1"
+         "&SCOPED-DEFINE $1"
       ]
    },
    "IF THEN": {
@@ -366,6 +373,33 @@
          "ELSE DO:",
          "\t",
          "END."
+      ]
+   },
+   "FOR EACH": {
+      "prefix": "fore",
+      "description": "FOR EACH WHERE NO-LOCK",
+      "body":[
+         "FOR EACH ${1:bufferName} WHERE ${2:sTRUE} NO-LOCK:",
+         "\t$0",
+         "END. /* FOR EACH ${1:bufferName} */"
+      ]
+   },
+   "FOR FIRST": {
+      "prefix": "forf",
+      "description": "FOR FIRST WHERE NO-LOCK",
+      "body":[
+         "FOR FIRST ${1:bufferName} WHERE ${2:TRUE} NO-LOCK:",
+         "\t$0",
+         "END. /* FOR FIRST ${1:bufferName} */"
+      ]
+   },
+   "FOR LAST": {
+      "prefix": "forl",
+      "description": "FOR LAST WHERE NO-LOCK",
+      "body":[
+         "FOR LAST ${1:bufferName} WHERE ${2:TRUE} NO-LOCK:",
+         "\t$0",
+         "END. /* FOR LAST ${1:bufferName} */"
       ]
    }
 }
