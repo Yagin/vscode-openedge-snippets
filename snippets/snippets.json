@@ -379,7 +379,7 @@
       "prefix": "fore",
       "description": "FOR EACH WHERE NO-LOCK",
       "body":[
-         "FOR EACH ${1:bufferName} WHERE ${2:sTRUE} NO-LOCK:",
+         "FOR EACH ${1:bufferName} WHERE ${2:TRUE} NO-LOCK:",
          "\t$0",
          "END. /* FOR EACH ${1:bufferName} */"
       ]
@@ -400,6 +400,58 @@
          "FOR LAST ${1:bufferName} WHERE ${2:TRUE} NO-LOCK:",
          "\t$0",
          "END. /* FOR LAST ${1:bufferName} */"
+      ]
+   },
+   "DISABLE TRIGGERS": {
+      "prefix": "dtl",
+      "description": "DISABLE TRIGGERS FOR LOAD",
+      "body":[
+         "DISABLE TRIGGERS FOR LOAD OF ${1:tableName}."
+      ]
+   },
+   "DEFINE CLASS": {
+      "prefix": "class",
+      "description": "DEFINE CLASS",
+      "body":[
+         "CLASS ${1:className} FINAL:\n",
+         "\t/*--------------------------------------------------------------------------",
+         "\t  Purpose:    ",
+         "\t  Parameters: ",
+         "\t  Notes:      ",
+         "\t---------------------------------------------------------------------------*/",
+         "\tCONSTRUCTOR PUBLIC ${1:className} (  ):\n",
+         "\t\t$0\n",
+         "\tEND CONSTRUCTOR.\n", 
+         "\tDESTRUCTOR ${1:className} (  ) :\n", 
+         "\tEND DESTRUCTOR.\n", 
+         "END CLASS. /* ${1:className} */\n"
+      ]
+   },
+   "DEFINE METHOD": {
+      "prefix": "meth",
+      "description": "METHOD PRIVATE",
+      "body":[
+         "/*---------------------------------------------------------------------------",
+         "  Purpose:    ",
+         "  Parameters: ",
+         "  Notes:      ",
+         "---------------------------------------------------------------------------*/",
+         "METHOD PRIVATE ${1:CARACTER} ${2:methodName} ( ):\n",
+         "\t$0\n",
+         "END METHOD."
+      ]
+   },
+   "DEFINE PROPERTY": {
+      "prefix": "prop",
+      "description": "DEFINE PRIVATE PROPERTY",
+      "body":[
+         "/*---------------------------------------------------------------------------",
+         "  Purpose:    ",
+         "  Notes:      ",
+         "---------------------------------------------------------------------------*/",
+         "DEFINE PRIVATE PROPERTY ${1:propName} AS ${2:CHARACTER} NO-UNDO",
+         "\tGET.",
+         "\tSET."
       ]
    }
 }

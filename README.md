@@ -147,3 +147,52 @@ FOR LAST bufferName WHERE query NO-LOCK:
    ...
 END. /* FOR LAST bufferName */
 ```
+
+### dtl - DISABLE TRIGGERS FOR LOAD OF
+```
+DISABLE TRIGGERS FOR LOAD OF tableName.
+```
+
+### class - DEFINE CLASS
+```
+CLASS className FINAL:
+
+   /*--------------------------------------------------------------------------
+     Purpose:    
+     Parameters: 
+     Notes:      
+   ---------------------------------------------------------------------------*/
+
+   CONSTRUCTOR PUBLIC className (  ):
+      
+   END CONSTRUCTOR.
+
+   DESTRUCTOR className (  ) :
+
+   END DESTRUCTOR.
+
+END CLASS. /* className */
+```
+
+### prop - DEFINE PROPERTY
+```
+/*---------------------------------------------------------------------------
+  Purpose:    
+  Notes:      
+---------------------------------------------------------------------------*/
+DEFINE PRIVATE PROPERTY propName AS CHARACTER NO-UNDO
+   GET.
+   SET.
+```
+
+### meth - DEFINE METHOD
+```
+/*---------------------------------------------------------------------------
+  Purpose:    
+  Parameters: 
+  Notes:      
+---------------------------------------------------------------------------*/
+METHOD PRIVATE CHARACTER methodName ( ):
+   
+END METHOD.
+```
